@@ -303,18 +303,18 @@ figure(fig);fig=fig+1;
 frefilenv=fft(filenv);
 
 subplot(4,1,1);
-plot(f*sample2/samplerate,envelope);
+plot(f/samplerate,envelope);
 title('env');
 
 subplot(4,1,2);
-plot(f(2:L/2)*(samplerate/sample2/length(filenv)),(abs(EnvF(2:L/2))))
+plot(f(2:L/2)*(samplerate/length(filenv)),(abs(EnvF(2:L/2))))
 
 subplot(4,1,3);
-plot(f*sample2/samplerate,filenv);
+plot(f/samplerate,filenv);
 title('filtered env');
 
 subplot(4,1,4);
-plot(f(2:L/2)*(samplerate/sample2/length(filenv)),abs(frefilenv(2:L/2)));
+plot(f(2:L/2)*(samplerate/length(filenv)),abs(frefilenv(2:L/2)));
 
 
 figure(fig); fig=fig+1;
